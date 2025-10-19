@@ -129,10 +129,11 @@ public class Main {
             System.out.println("Menu:");
             System.out.println("1. Inserir letra/numero em Morse");
             System.out.println("2. Buscar letra/numero em Morse");
-            System.out.println("3. Remover letra/numero em Morse ");
+            System.out.println("3. Remover letra/numero em Morse");
             System.out.println("4. Exibir arvore Morse");
             System.out.println("5. Mostrar Alfabeto Morse");
-            System.out.println("6. Sair");
+            System.out.println("6. Inserir manualmente todas as letras e numeros (usar arvore.inserir)");
+            System.out.println("7. Sair");
             System.out.print("Escolha uma opcao: ");
             int opcao = sc.nextInt();
 
@@ -152,49 +153,88 @@ public class Main {
                 arvore.remover(codigo);
             } else if (opcao == 4) {
                 arvore.exibirArvore(arvore.root, 0, "");
-            }else if (opcao == 5) {
-            System.out.println("""
-                Alfabeto Morse:
-                A : .-
-                B : -...
-                C : -.-.
-                D : -..
-                E : .
-                F : ..-.
-                G : --.
-                H : ....
-                I : ..
-                J : .---
-                K : -.-
-                L : .-..
-                M : --
-                N : -.
-                O : ---
-                P : .--.
-                Q : --.-
-                R : .-.
-                S : ...
-                T : -
-                U : ..-
-                V : ...-
-                W : .--
-                X : -..-
-                Y : -.--
-                Z : --..
+            } else if (opcao == 5) {
+                System.out.println("""
+                    Alfabeto Morse:
+                    A : .-
+                    B : -...
+                    C : -.-.
+                    D : -..
+                    E : .
+                    F : ..-.
+                    G : --.
+                    H : ....
+                    I : ..
+                    J : .---
+                    K : -.-
+                    L : .-..
+                    M : --
+                    N : -.
+                    O : ---
+                    P : .--.
+                    Q : --.-
+                    R : .-.
+                    S : ...
+                    T : -
+                    U : ..-
+                    V : ...-
+                    W : .--
+                    X : -..-
+                    Y : -.--
+                    Z : --..
 
-                1 : .----
-                2 : ..---
-                3 : ...--
-                4 : ....-
-                5 : .....
-                6 : -....
-                7 : --...
-                8 : ---..
-                9 : ----.
-                0 : -----
-                """);
-            }
-            else if (opcao == 6) {
+                    1 : .----
+                    2 : ..---
+                    3 : ...--
+                    4 : ....-
+                    5 : .....
+                    6 : -....
+                    7 : --...
+                    8 : ---..
+                    9 : ----.
+                    0 : -----
+                    """);
+            } else if (opcao == 6) {
+                arvore.inserir('A', ".-");
+                arvore.inserir('B', "-...");
+                arvore.inserir('C', "-.-.");
+                arvore.inserir('D', "-..");
+                arvore.inserir('E', ".");
+                arvore.inserir('F', "..-.");
+                arvore.inserir('G', "--.");
+                arvore.inserir('H', "....");
+                arvore.inserir('I', "..");
+                arvore.inserir('J', ".---");
+                arvore.inserir('K', "-.-");
+                arvore.inserir('L', ".-..");
+                arvore.inserir('M', "--");
+                arvore.inserir('N', "-.");
+                arvore.inserir('O', "---");
+                arvore.inserir('P', ".--.");
+                arvore.inserir('Q', "--.-");
+                arvore.inserir('R', ".-.");
+                arvore.inserir('S', "...");
+                arvore.inserir('T', "-");
+                arvore.inserir('U', "..-");
+                arvore.inserir('V', "...-");
+                arvore.inserir('W', ".--");
+                arvore.inserir('X', "-..-");
+                arvore.inserir('Y', "-.--");
+                arvore.inserir('Z', "--..");
+
+                arvore.inserir('1', ".----");
+                arvore.inserir('2', "..---");
+                arvore.inserir('3', "...--");
+                arvore.inserir('4', "....-");
+                arvore.inserir('5', ".....");
+                arvore.inserir('6', "-....");
+                arvore.inserir('7', "--...");
+                arvore.inserir('8', "---..");
+                arvore.inserir('9', "----.");
+                arvore.inserir('0', "-----");
+
+                System.out.println("Alfabeto completo e números inseridos manualmente!");
+            } else if (opcao == 7) {
                 System.out.println("Saindo...");
                 break;
             } else {
